@@ -51,10 +51,6 @@ class Playlist():
         
     def __getitem__(self, item):
         return self.programas[item]
-        
-    @property
-    def listagem(self):
-        return self.programas
     
     def __len__(self):
         return len(self.programas)
@@ -69,7 +65,7 @@ himym = Series("How i met your mother", 2005, 9)
 filmes_e_series = [vingadores, atlanta, pantera, himym]
 playlist_fim_de_semana = Playlist('fim de semana', filmes_e_series)
 
-for programa in playlist_fim_de_semana.listagem:
+for programa in playlist_fim_de_semana:
     print(programa)
     
 print(f'Tamanho total da lista', len(playlist_fim_de_semana))
